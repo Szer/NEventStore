@@ -62,7 +62,7 @@ namespace NEventStore.Example
 			{
 				var @event = new SomeDomainEvent { Value = "Second event." };
 
-				stream.Add(new EventMessage { Body = @event });
+				stream.Add(new EventMessage { Body = null });
 				stream.CommitChanges(Guid.NewGuid());
 			}
 		}
